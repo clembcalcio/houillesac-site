@@ -1,0 +1,25 @@
+# Configuration Netlify pour houillesac.fr
+# Le site est 100 % statique : aucun build n'est nécessaire.
+
+[build]
+  publish = "site-final"
+
+# En-têtes de sécurité raisonnables pour un site statique
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache long pour les ressources statiques (images, CSS, JS)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/documents/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

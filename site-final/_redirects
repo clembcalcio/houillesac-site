@@ -1,0 +1,6 @@
+# Redirections Netlify pour houillesac.fr
+# Les URL propres (dossier + index.html) sont gérées nativement par Netlify.
+# La page 404.html est servie automatiquement pour toute page inexistante.
+
+# Rediriger les anciennes variantes avec index.html vers les URL propres
+/index.html    /    301

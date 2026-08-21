@@ -1,0 +1,15 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# Éditeurs et outils locaux
+.vscode/
+.idea/
+.claude/
+
+# Netlify (dossier local de l'outil en ligne de commande)
+.netlify/
+
+# Fichiers temporaires
+*.log
+*.tmp

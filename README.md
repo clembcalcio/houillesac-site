@@ -34,13 +34,15 @@ Tout ce qui est visible en ligne se trouve dans le dossier `site-final`.
 
 ## Voir le site sur son ordinateur
 
-Ouvrir un terminal dans le dossier du projet et lancer :
+Le plus simple : double-cliquer sur `site-final/index.html`. La page s'ouvre dans le navigateur avec son design, ses images et ses polices (le site utilise des chemins relatifs).
+
+Pour naviguer de page en page comme sur le vrai site (les adresses propres du type `/le-club/` demandent un serveur), ouvrir un terminal dans le dossier du projet et lancer :
 
 ```bash
 cd site-final && python3 -m http.server 8000
 ```
 
-Puis ouvrir [http://localhost:8000](http://localhost:8000) dans le navigateur. (Les pages utilisent des liens commençant par `/` : il faut ce petit serveur local, un simple double-clic sur le fichier HTML ne suffit pas.)
+Puis ouvrir [http://localhost:8000](http://localhost:8000) dans le navigateur.
 
 ## Modifier un texte
 

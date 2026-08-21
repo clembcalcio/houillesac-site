@@ -1119,20 +1119,22 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
 
 /* Animations d'apparition ------------------------------------------------ */
 
-.reveal {
+/* Les animations ne s'activent que si JavaScript est présent (classe "js"
+   posée sur <html> dans chaque page) : sans JavaScript, tout reste visible. */
+html.js .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-.reveal.in {
+html.js .reveal.in {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 

@@ -391,6 +391,23 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
   padding: 7rem 0 3.5rem;
 }
 
+/* Mobile et tablette : redonne au hero la marge laterale du site, que le
+   raccourci padding ci-dessus neutralisait. Au-dela de 1180px le conteneur
+   est deja centre, le rendu desktop reste donc inchange. */
+@media (max-width: 1179px) {
+  .hero-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1179px) {
+  .hero-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .hero-kicker {
   font-family: var(--font-display);
   font-weight: 700;

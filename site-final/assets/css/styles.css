@@ -435,6 +435,17 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
   margin-bottom: clamp(1.6rem, 3vw, 2.4rem);
 }
 
+/* Mobile uniquement : ajustements de proportions du hero.
+   Tablette (768px et plus) et desktop restent inchangés. */
+@media (max-width: 767px) {
+  .hero-kicker { font-size: 0.86rem; }
+  .hero h1 { font-size: clamp(1.96rem, 5.6vw, 3.9rem); }
+  .hero .btn {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
 /* Desktop : cadrage remonté pour garder la tête du joueur de droite entière */
 @media (min-width: 1024px) {
   .hero-media img { object-position: center 6%; }

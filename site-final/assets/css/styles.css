@@ -391,32 +391,64 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
   padding: 7rem 0 3.5rem;
 }
 
+/* Mobile et tablette : redonne au hero la marge laterale du site, que le
+   raccourci padding ci-dessus neutralisait. Au-dela de 1180px le conteneur
+   est deja centre, le rendu desktop reste donc inchange. */
+@media (max-width: 1179px) {
+  .hero-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1179px) {
+  .hero-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .hero-kicker {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: #d4af37;
   margin-bottom: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-kicker { font-size: 1.125rem; }
 }
 
 .hero h1 {
   color: #fff;
+  font-family: "League Spartan", var(--font-display);
   font-size: clamp(2.1rem, 6vw, 4.2rem);
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.005em;
   line-height: 1.05;
   max-width: 15em;
   text-wrap: balance;
+  margin-bottom: clamp(1.6rem, 3vw, 2.4rem);
 }
 
-.hero-sub {
-  font-size: clamp(1.02rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 38em;
-  margin-bottom: 1.8rem;
+/* Mobile uniquement : ajustements de proportions du hero.
+   Tablette (768px et plus) et desktop restent inchangés. */
+@media (max-width: 767px) {
+  .hero-kicker { font-size: 0.86rem; }
+  .hero h1 { font-size: clamp(1.96rem, 5.6vw, 3.9rem); }
+  .hero .btn {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* Desktop : cadrage remonté pour garder la tête du joueur de droite entière */
+@media (min-width: 1024px) {
+  .hero-media img { object-position: center 6%; }
 }
 
 /* Bandeau de statistiques ------------------------------------------------ */

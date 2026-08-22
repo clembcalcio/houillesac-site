@@ -394,17 +394,22 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
 .hero-kicker {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #d4af37;
   margin-bottom: 1.1rem;
 }
 
+@media (min-width: 1024px) {
+  .hero-kicker { font-size: 1.125rem; }
+}
+
 .hero h1 {
   color: #fff;
+  font-family: "League Spartan", var(--font-display);
   font-size: clamp(2.1rem, 6vw, 4.2rem);
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.005em;
   line-height: 1.05;

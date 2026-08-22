@@ -397,7 +397,7 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
   font-size: 0.85rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: #d4af37;
   margin-bottom: 1.1rem;
 }
 
@@ -410,13 +410,12 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
   line-height: 1.05;
   max-width: 15em;
   text-wrap: balance;
+  margin-bottom: clamp(1.6rem, 3vw, 2.4rem);
 }
 
-.hero-sub {
-  font-size: clamp(1.02rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 38em;
-  margin-bottom: 1.8rem;
+/* Desktop : cadrage remonté pour garder la tête du joueur de droite entière */
+@media (min-width: 1024px) {
+  .hero-media img { object-position: center 6%; }
 }
 
 /* Bandeau de statistiques ------------------------------------------------ */

@@ -1,22 +1,32 @@
-/* Houilles Athletic Club, interactions légères (menu mobile, apparitions) */
+/* Houilles Athletic Club, interactions légères
+   (menu mobile, header au scroll, apparitions) */
 
 (function () {
   "use strict";
 
-  /* Menu mobile ---------------------------------------------------------- */
+  var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("main-nav");
+
+  /* Menu mobile ---------------------------------------------------------- */
+
+  function closeNav() {
+    if (!nav || !toggle) { return; }
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    if (header) { header.classList.remove("nav-open"); }
+  }
 
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      if (header) { header.classList.toggle("nav-open", open); }
     });
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && nav.classList.contains("open")) {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        closeNav();
         toggle.focus();
       }
     });
@@ -27,13 +37,27 @@
         !nav.contains(e.target) &&
         !toggle.contains(e.target)
       ) {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        closeNav();
       }
     });
   }
 
+  /* Header transparent qui devient clair au scroll (homepage) ------------- */
+
+  var overlay = header && header.classList.contains("header-overlay");
+
+  function headerCheck() {
+    if (!overlay) { return; }
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }
+
+  if (overlay) {
+    window.addEventListener("scroll", headerCheck, { passive: true });
+    headerCheck();
+  }
+
   /* Apparition au scroll -------------------------------------------------- */
+
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var items = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
 

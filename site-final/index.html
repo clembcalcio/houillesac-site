@@ -26,7 +26,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <link rel="preload" as="image" href="assets/images/photo-01-hero-1536.webp" imagesrcset="assets/images/photo-01-hero-800.webp 800w, assets/images/photo-01-hero-1536.webp 1536w" imagesizes="100vw">
@@ -75,10 +75,10 @@
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <header class="site-header">
+  <header class="site-header header-overlay">
     <div class="container header-inner">
       <a class="brand" href="./" aria-label="Houilles Athletic Club, accueil">
-        <img src="assets/images/logo-hac.png" alt="Logo du Houilles Athletic Club" width="48" height="48">
+        <img src="assets/images/logo-hac.png" alt="Logo du Houilles Athletic Club" width="46" height="46">
         <span class="brand-name">
           <span class="brand-title">Houilles Athletic Club</span>
           <span class="brand-sub">Depuis 1913</span>
@@ -118,14 +118,19 @@
              fetchpriority="high" width="1536" height="1536">
       </div>
       <div class="container hero-content">
-        <p class="hero-kicker">Houilles Athletic Club, football à Houilles</p>
-        <h1>Un siècle d'histoire.<br>Une nouvelle ambition.</h1>
+        <p class="hero-overline">Houilles Athletic Club <span aria-hidden="true">·</span> <span class="year">Depuis 1913</span></p>
+        <h1>
+          <span class="line">Un siècle d'histoire.</span>
+          <span class="line">Une nouvelle</span>
+          <span class="line accent">ambition.</span>
+        </h1>
         <p class="hero-sub">Construire un club régional majeur, formateur, ambitieux et ancré à Houilles depuis 1913.</p>
         <div class="btn-row">
-          <a class="btn btn-light" href="le-club/">Découvrir le club</a>
+          <a class="btn btn-accent" href="le-club/">Découvrir le club</a>
           <a class="btn btn-ghost-light" href="licences/">Inscriptions 2026/2027</a>
         </div>
       </div>
+      <p class="hero-scroll" aria-hidden="true">Faire défiler</p>
     </section>
 
     <!-- Chiffres clés -->
@@ -133,11 +138,11 @@
       <div class="container">
         <div class="stats reveal">
           <div class="stat">
-            <div class="stat-figure">1&nbsp;200+</div>
+            <div class="stat-figure">1&nbsp;200<span class="plus">+</span></div>
             <div class="stat-label">Licenciés</div>
           </div>
           <div class="stat">
-            <div class="stat-figure">40+</div>
+            <div class="stat-figure">40<span class="plus">+</span></div>
             <div class="stat-label">Équipes</div>
           </div>
           <div class="stat">
@@ -158,7 +163,14 @@
 
     <!-- Notre projet -->
     <section class="section section-warm">
-      <div class="container split">
+      <div class="container split split-wide-media split-media-left">
+        <div class="split-media landscape framed hover-zoom reveal">
+          <img src="assets/images/photo-02-ambition-1152.webp"
+               srcset="assets/images/photo-02-ambition-800.webp 800w, assets/images/photo-02-ambition-1152.webp 1152w"
+               sizes="(min-width: 900px) 55vw, 100vw"
+               alt="Joueur du HAC tirant un corner devant la tribune du stade Maurice Baquet"
+               loading="lazy" width="1152" height="1536">
+        </div>
         <div class="split-body reveal">
           <p class="kicker">Notre projet</p>
           <h2>Construire un club régional majeur</h2>
@@ -186,21 +198,12 @@
               </div>
             </li>
           </ol>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="le-club/clement-battistini/">Découvrir notre projet</a>
-          </div>
-        </div>
-        <div class="split-media portrait reveal">
-          <img src="assets/images/photo-02-ambition-1152.webp"
-               srcset="assets/images/photo-02-ambition-800.webp 800w, assets/images/photo-02-ambition-1152.webp 1152w"
-               sizes="(min-width: 900px) 45vw, 100vw"
-               alt="Joueur du HAC tirant un corner devant la tribune du stade Maurice Baquet"
-               loading="lazy" width="1152" height="1536">
+          <a class="link-arrow" href="le-club/clement-battistini/">Découvrir notre projet</a>
         </div>
       </div>
     </section>
 
-    <!-- Équipes phares -->
+    <!-- Équipes -->
     <section class="section">
       <div class="container">
         <div class="section-head reveal">
@@ -208,29 +211,41 @@
           <h2>Une présence installée au niveau régional</h2>
           <p>Le HAC aligne plus de 40 équipes, des Seniors au Baby Foot. L'équipe première évolue en Régional 1 Île-de-France et les catégories de référence U14, U16 et U18 sont installées au niveau régional.</p>
         </div>
-        <ul class="team-list reveal">
+
+        <div class="team-flagship reveal">
+          <div>
+            <p class="team-flagship-label">Équipe première</p>
+            <p class="team-flagship-name">Seniors A</p>
+          </div>
+          <p class="team-flagship-div">Régional 1 <span>Île-de-France</span></p>
+        </div>
+
+        <ul class="team-tier reveal">
           <li>
-            <span class="team-name">Seniors A</span>
-            <span class="team-division division-top">Régional 1 Île-de-France</span>
+            <span class="tier-cat">U14</span>
+            <span class="tier-div">Régional 3</span>
+            <span class="tier-note">4 équipes</span>
           </li>
           <li>
-            <span class="team-name">U20 <small>1 équipe</small></span>
-            <span class="team-division">Régional 3</span>
+            <span class="tier-cat">U16</span>
+            <span class="tier-div">Régional 3</span>
+            <span class="tier-note">3 équipes</span>
           </li>
           <li>
-            <span class="team-name">U18 <small>2 équipes</small></span>
-            <span class="team-division">Régional 3</span>
-          </li>
-          <li>
-            <span class="team-name">U16 <small>3 équipes</small></span>
-            <span class="team-division">Régional 3</span>
-          </li>
-          <li>
-            <span class="team-name">U14 <small>4 équipes</small></span>
-            <span class="team-division">Régional 3</span>
+            <span class="tier-cat">U18</span>
+            <span class="tier-div">Régional 3</span>
+            <span class="tier-note">2 équipes</span>
           </li>
         </ul>
-        <div class="btn-row mt-2 reveal">
+
+        <ul class="team-secondary reveal">
+          <li>
+            <span class="sec-name">U20 <small>1 équipe</small></span>
+            <span class="sec-div">Régional 3</span>
+          </li>
+        </ul>
+
+        <div class="btn-row mt-3 reveal">
           <a class="btn btn-outline" href="equipes/">Toutes nos équipes</a>
         </div>
       </div>
@@ -238,49 +253,49 @@
 
     <!-- Formation -->
     <section class="section section-tint">
-      <div class="container split split-media-left">
-        <div class="split-media portrait reveal">
-          <img src="assets/images/photo-03-formation-1275.webp"
-               srcset="assets/images/photo-03-formation-800.webp 800w, assets/images/photo-03-formation-1275.webp 1275w"
-               sizes="(min-width: 900px) 45vw, 100vw"
-               alt="Éducateur du HAC donnant ses consignes à de jeunes joueurs"
-               loading="lazy" width="1275" height="1536">
-        </div>
-        <div class="split-body reveal">
-          <p class="kicker">Formation</p>
-          <h2>Former aujourd'hui, révéler demain</h2>
-          <p>L'École de Football du HAC accueille les enfants dès le Baby Foot U4 et les accompagne jusqu'aux U13. Labellisée <strong>Label Jeunes FFF Excellence</strong>, elle s'appuie sur 20 éducateurs diplômés et sur un projet sportif exigeant, éducatif et accessible.</p>
-          <p>Fabio Batista, Directeur de l'École de Football, pilote avec les éducateurs du club l'organisation et le projet sportif des catégories U4 à U13.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="formation/">Découvrir l'École de Football</a>
+      <div class="container">
+        <div class="split split-wide-media">
+          <div class="split-body reveal">
+            <p class="kicker">Formation</p>
+            <h2>Former aujourd'hui, révéler demain</h2>
+            <p class="mega-label outline">De U4 à U13</p>
+            <p>L'École de Football du HAC accueille les enfants dès le Baby Foot U4 et les accompagne jusqu'aux U13. Labellisée <strong>Label Jeunes FFF Excellence</strong>, elle s'appuie sur 20 éducateurs diplômés et sur un projet sportif exigeant, éducatif et accessible.</p>
+            <p>Fabio Batista, Directeur de l'École de Football, pilote avec les éducateurs du club l'organisation et le projet sportif des catégories U4 à U13.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="formation/">Découvrir l'École de Football</a>
+            </div>
+          </div>
+          <div class="split-media portrait framed hover-zoom reveal">
+            <img src="assets/images/photo-03-formation-1275.webp"
+                 srcset="assets/images/photo-03-formation-800.webp 800w, assets/images/photo-03-formation-1275.webp 1275w"
+                 sizes="(min-width: 900px) 45vw, 100vw"
+                 alt="Éducateur du HAC donnant ses consignes à de jeunes joueurs"
+                 loading="lazy" width="1275" height="1536">
           </div>
         </div>
-      </div>
-      <div class="container mt-3">
-        <figure class="photo-band reveal">
-          <img src="assets/images/photo-05-ecole-foot-medailles-1536.webp"
-               srcset="assets/images/photo-05-ecole-foot-medailles-800.webp 800w, assets/images/photo-05-ecole-foot-medailles-1536.webp 1536w"
-               sizes="(min-width: 1180px) 1116px, 100vw"
-               alt="Jeunes joueurs de l'École de Football du HAC montrant leurs médailles"
-               loading="lazy" width="1536" height="864">
-        </figure>
       </div>
     </section>
 
     <!-- Mot du Président -->
-    <section class="section quote-band">
-      <div class="container">
-        <p class="kicker reveal">Le mot du Président</p>
-        <blockquote class="reveal">
-          <p>Le Houilles Athletic Club entre dans une nouvelle étape de son histoire. Notre ambition est claire : structurer durablement le club, faire de notre formation une référence régionale et permettre à nos équipes de progresser au plus haut niveau possible.</p>
-          <p>Nous voulons avancer sans perdre ce qui fait la force du HAC depuis plus d'un siècle : son ancrage à Houilles, sa dimension populaire et la place centrale accordée à la jeunesse.</p>
-          <footer class="quote-signature">
-            <strong>Clément Battistini</strong>
-            <span>Président du Houilles Athletic Club</span>
-          </footer>
-        </blockquote>
-        <div class="btn-row mt-2 reveal">
-          <a class="btn btn-outline" href="le-club/clement-battistini/">Découvrir notre projet</a>
+    <section class="section president">
+      <p class="president-watermark" aria-hidden="true">1913</p>
+      <div class="container president-inner">
+        <div class="president-title reveal">
+          <p class="kicker">Le mot du Président</p>
+          <h2>La vision du club</h2>
+        </div>
+        <div class="reveal">
+          <blockquote>
+            <p>Le Houilles Athletic Club entre dans une nouvelle étape de son histoire. Notre ambition est claire : structurer durablement le club, faire de notre formation une référence régionale et permettre à nos équipes de progresser au plus haut niveau possible.</p>
+            <p>Nous voulons avancer sans perdre ce qui fait la force du HAC depuis plus d'un siècle : son ancrage à Houilles, sa dimension populaire et la place centrale accordée à la jeunesse.</p>
+            <footer class="president-signature">
+              <strong>Clément Battistini</strong>
+              <span>Président du Houilles Athletic Club</span>
+            </footer>
+          </blockquote>
+          <div class="mt-2">
+            <a class="link-arrow" href="le-club/clement-battistini/">Découvrir notre projet</a>
+          </div>
         </div>
       </div>
     </section>
@@ -291,10 +306,10 @@
         <div>
           <p class="kicker">Saison 2026/2027</p>
           <h2>Inscriptions 2026/2027</h2>
-          <p class="mb-0">Rejoignez le Houilles Athletic Club pour la nouvelle saison. Le dossier d'inscription est disponible en téléchargement et l'équipe du club vous accompagne à chaque étape.</p>
+          <p class="mb-0">Téléchargez votre dossier et rejoignez le Houilles Athletic Club pour la nouvelle saison. L'équipe du club vous accompagne à chaque étape.</p>
         </div>
         <div class="btn-row">
-          <a class="btn btn-light" href="licences/">S'inscrire au HAC</a>
+          <a class="btn btn-accent" href="licences/">S'inscrire au HAC</a>
           <a class="btn btn-ghost-light" href="documents/dossier-inscription-2026-2027.pdf">Télécharger le dossier</a>
         </div>
       </div>
@@ -306,26 +321,37 @@
         <div class="section-head reveal">
           <p class="kicker">Partenaires</p>
           <h2>Ils accompagnent le HAC</h2>
-          <p>Le club construit des partenariats durables avec les entreprises et les institutions qui souhaitent s'associer à son projet.</p>
         </div>
-        <div class="partner-grid reveal">
-          <div class="partner-card">
+
+        <div class="partner-premium reveal">
+          <a class="partner-premium-logo" href="https://rpgreen.fr/" rel="noopener" aria-label="RP Green, partenaire premium du HAC, ouvrir le site rpgreen.fr">
+            <img src="assets/images/logo-rpgreen.jpg" alt="Logo de RP Green" width="240" height="240" loading="lazy">
+          </a>
+          <div>
             <span class="partner-tag">Partenaire premium</span>
-            <a href="https://rpgreen.fr/" rel="noopener" aria-label="RP Green, partenaire premium du HAC, ouvrir le site rpgreen.fr">
-              <img src="assets/images/logo-rpgreen.jpg" alt="Logo de RP Green" width="160" height="160">
-            </a>
             <h3>RP Green</h3>
-            <p>Partenaire premium du Houilles Athletic Club.</p>
-          </div>
-          <div class="partner-card">
-            <span class="partner-tag">Institution</span>
-            <img src="assets/images/logo-ville-houilles.png" alt="Logo de la Ville de Houilles" width="106" height="160" style="height:160px;width:auto;">
-            <h3>Ville de Houilles</h3>
-            <p>Avec le soutien de la Ville de Houilles.</p>
+            <p>Partenaire premium du Houilles Athletic Club, présent sur les maillots du club.</p>
+            <a class="link-arrow" href="https://rpgreen.fr/" rel="noopener">Voir le site de RP Green</a>
           </div>
         </div>
-        <div class="btn-row mt-3 reveal">
-          <a class="btn btn-primary" href="partenaires/">Devenir partenaire</a>
+
+        <div class="partner-support reveal">
+          <img src="assets/images/logo-ville-houilles.png" alt="Logo de la Ville de Houilles" width="54" height="82" loading="lazy">
+          <p>Avec le soutien de la Ville de Houilles</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appel partenariat -->
+    <section class="band-dark" aria-label="Devenir partenaire du HAC">
+      <div class="container band-dark-inner">
+        <div>
+          <p class="kicker">Partenariats</p>
+          <h2>Votre entreprise aux côtés du HAC</h2>
+          <p class="mb-0">Plus de 1&nbsp;200 licenciés et leurs familles, plus de 40 équipes, un club présent à Houilles depuis 1913 et un projet régional ambitieux : associez votre entreprise à une dynamique locale forte.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-accent" href="partenaires/">Devenir partenaire</a>
         </div>
       </div>
     </section>
@@ -354,10 +380,11 @@
   </main>
 
   <footer class="site-footer">
+    <p class="footer-signature" aria-hidden="true">HAC · 1913</p>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/images/logo-hac.png" alt="Logo du Houilles Athletic Club" width="56" height="56" loading="lazy">
+          <img src="assets/images/logo-hac.png" alt="Logo du Houilles Athletic Club" width="62" height="62" loading="lazy">
           <div>
             <p class="footer-club">Houilles Athletic Club</p>
             <address>

@@ -301,7 +301,7 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
 .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 1023px) {
+@media (max-width: 1179px) {
   .nav-toggle { display: block; }
   .header-cta { display: none; }
 
@@ -348,8 +348,13 @@ h3 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1180px) {
   .nav-cta-mobile { display: none; }
+
+  /* Huit entrees de menu : tout tient sur une ligne a partir de 1180px */
+  .main-nav ul { gap: 0.95rem; }
+  .main-nav a,
+  .brand-name .brand-title { white-space: nowrap; }
 }
 
 /* Hero ------------------------------------------------------------------- */

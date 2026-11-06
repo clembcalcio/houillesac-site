@@ -36,6 +36,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://houillesac.fr/matchs/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://houillesac.fr/formation/</loc>
     <lastmod>2026-08-22</lastmod>
     <priority>0.9</priority>
